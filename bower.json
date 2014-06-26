@@ -1,0 +1,23 @@
+{
+  "name": "localhost",
+  "version": "0.0.0",
+  "authors": [
+    "miukki macbook air <miukki@gmail.com>"
+  ],
+  "description": "try troop.js",
+  "main": "index.html",
+  "keywords": [
+    "troop.js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}
