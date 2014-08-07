@@ -1,4 +1,4 @@
-define(['Views/FormView', 'Models/Task', 'Models/Image'], function( FormView, Task, Image){
+define(['Views/FormView', 'Models/Task'], function( FormView, Task){
 
   function start(){
     FormView.render();
@@ -10,7 +10,7 @@ define(['Views/FormView', 'Models/Task', 'Models/Image'], function( FormView, Ta
         document.getElementById('add').addEventListener('click', function(){
             var tasks = JSON.parse(localStorage.tasks || '[]');
             var userName = document.getElementById('user-name').value;
-            tasks.push(new Task(userName));
+            tasks.push(new Task({'name': userName}));
 		        localStorage.setItem('tasks', JSON.stringify(tasks));
             require(['Controllers/ListController'], function(ListController){
                 ListController.start({'task': true});
@@ -23,20 +23,6 @@ define(['Views/FormView', 'Models/Task', 'Models/Image'], function( FormView, Ta
                 ListController.start({'task': true});
             });
         }, false);
-
-        document.getElementById('addImage').addEventListener('click', function(){
-            var images = JSON.parse(localStorage.images || '[]');
-            var dataUri = document.getElementById('imageDataUri').value;
-            var img = new Image(dataUri);
-            console.log('img', img);
-            images.push(img);
-		        localStorage.setItem('images', JSON.stringify(images));
-            require(['Controllers/ImageController'], function(ImageController){
-                ImageController.start({'images': true});
-            });
-        }, false);
-
-
     }
 
     return {

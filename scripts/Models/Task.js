@@ -1,8 +1,9 @@
-define(function(){
+define(['Models/Utils'], function(Utils){
 
     function Task(source){
-	    source = (source && ('string' == typeof source)) ? source : '';
-        this.name = source || 'Default task';
+        source = Utils.normalize(source); // all time object because we normalize data-source
+        this.name = Utils.boolean(source.name);
+        //try Utils.number(source.name)
     }
 
     return Task;
