@@ -43,10 +43,16 @@
 
 
 6. Why we need models:
-  - avoid errors in templates
+  - avoid/reduce errors in templates:
+    for example in response i got [undefined] instead [string],
+    but (in controller /or in template ) i want call string.toLowerString() i will catch
+    error;
   - in practice some different templates can use one-abstrac-data-object: for example User. thats why we need @normalize@
     data-User for all templates.
   - avoid repeat code
+  - for every model you can add method : for example User.prototype.setName = function() {}
+  - prototyping Data : for example for User = {img : {'sm': '', lg: '', retina: ''}} I WANT  that img-be-object
+    for all responses,
 
 
 7. How we can use models in troops.js ? and we need it or not ?
