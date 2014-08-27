@@ -13,11 +13,11 @@
  isNaN(NaN), isNaN('some_string') // true
 
 
-4. Let's take a look my small app in MVC. Whu we need models ?
+4. Let's take a look my small app in MVC. Why we need models ?
 
 Let's take a look my models:
 
-4.1. !!!Simple object
+4.1. !!!Simple  My-abstract-object
   var task = new Task() :
 
     function Task(source){
@@ -26,7 +26,7 @@ Let's take a look my models:
         //try Utils.number(source.name)
     }
 
-4.2. !!!Complex object
+4.2. !!!Complex My-abstract-object
   var user = new User();
 
     function User(source){
