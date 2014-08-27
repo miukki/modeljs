@@ -43,5 +43,10 @@
 
 
 6. Why we need models:
-  - avoid errors in tmpl
-  - ..etc
+  - avoid errors in templates
+  - in practice some different templates can use one-abstrac-data-object: for example User. thats why we need @normalize@
+    data-User for all templates.
+  - avoid repeat code
+
+
+7. How we can use models in troops.js ?
