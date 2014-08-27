@@ -49,4 +49,4 @@
   - avoid repeat code
 
 
-7. How we can use models in troops.js ?
+7. How we can use models in troops.js ? and we need it or not ?
